@@ -7,9 +7,11 @@
 
 # dependencies
 /node_modules
+package-lock.json
 
 # IDEs and editors
 .vscode/
+workspace.code-workspace
 /.idea
 .project
 .classpath
@@ -42,3 +44,7 @@ yarn-error.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#Cypress
+cypress/screenshots/
+cypress/video/

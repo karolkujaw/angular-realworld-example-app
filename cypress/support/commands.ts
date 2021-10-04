@@ -10,6 +10,15 @@
 //
 //
 // -- This is a parent command --
+declare namespace Cypress {
+	interface Chainable {
+		/**
+		 * Custom command to select DOM element by data-cy attribute.
+		 * @example cy.dataCy('greeting')
+		 */
+		getByDataCy(value: string): Chainable<Element>;
+	}
+}
 
 Cypress.Commands.add('getByDataCy', (locator) => {
 	return cy.get(`[data-cy=${locator}]`);
